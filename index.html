@@ -198,23 +198,28 @@
 	<input type="submit" id="bt_submit" value="login">
 	<input type="button" id="button" value="button">
 </form>
+
 <!--
 <form action="https://formspree.io/chenjuichi@gmail.com"
       method="POST">
     <input type="text" name="name" placeholder="input name">
     <input type="email" name="_replyto" placeholder="input email">
     <input type="hidden" name="_subject" value="新郵件!" />
--->
     <!-- <input type="hidden" name="_next" value="//site.io/thanks.html" /> -->
-<!--
-    <input type="submit" value="Send">
+-->    
+<!--    
+    <p>Comments:</p>
+    <textarea id="bk_comments"></textarea><br/>
+    <input type="submit" value="寄出">
 </form>
 -->
+
+
 <div id="formBlock">
   <form id="someForm">
-    <p>Name:</p> <input type="text" id="bk_name"><br/>
-    <p>Email:</p> <input type="email" id="bk_email"><br/>
-    <p>Comments:</p> <br/>
+    <label for="name">Name:</label> <input type="text" id="bk_name"><br/>
+    <label for="email">Email:</label> <input type="email" id="bk_email"><br/>
+    <label for="comments">Comments:</label> <br/>
     <textarea id="bk_comments"></textarea><br/>
     <input type="submit" id="bk_submit" value="寄出">
   </form>
@@ -238,7 +243,7 @@
   //jQuery
   //$(document).ready(function() {
   $(function() {
-    $('#someForm').on('bk_submit', function(e) {
+    $('#someForm').on('click', '#bk_submit', function(e) {
       e.preventDefault();
         
       //get the name field value
