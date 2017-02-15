@@ -195,18 +195,33 @@
 <form>
 	<input type="text" id="textbox" placeholder="帳號">
 	<input type="password" placeholder="密碼">
-	<input type="submit" value="login">
+	<input type="submit" id="bt_submit" value="login">
 	<input type="button" id="button" value="button">
 </form>
-
+<!--
 <form action="https://formspree.io/chenjuichi@gmail.com"
       method="POST">
     <input type="text" name="name" placeholder="input name">
     <input type="email" name="_replyto" placeholder="input email">
     <input type="hidden" name="_subject" value="新郵件!" />
-    <input type="hidden" name="_next" value="//site.io/thanks.html" />
+-->
+    <!-- <input type="hidden" name="_next" value="//site.io/thanks.html" /> -->
+<!--
     <input type="submit" value="Send">
 </form>
+-->
+<div id="formBlock">
+  <form id="someForm">
+    <label for="name">Name:</label> <input type="text" id="bk_name"><br/>
+    <label for="email">Email:</label> <input type="email" id="bk_email"><br/>
+    <label for="comments">Comments:</label> <br/>
+    <textarea id="bk_comments"></textarea><br/>
+    <input type="submit" id="bk_submit" value="寄出">
+  </form>
+</div>
+<div id="thankyouBlock" style="display:none">
+  <p>Thank you for filling out the form. I care a lot about it.</p>
+</div>
 
 <div class="container">
   <div class="row">
@@ -218,6 +233,44 @@
    </div>
   </div>
 </div>
+
+<script>
+  //jQuery
+  //$(document).ready(function() {
+  $(function() {
+    $('#someForm').on('bk_submit', function(e) {
+      e.preventDefault();
+        
+      //get the name field value
+      var name = $('#bk_name').val();
+      //get the name field value
+      var email = $('#bk_email').val();
+      //get the comments
+      var comments = $('#bk_comments').val();
+                    
+      //pretend we don't need validation
+        
+      //send to formspree
+      $.ajax({
+        url:'https://formspree.io/chenjuichi@gmail.com',
+        method:'POST',
+        data:{
+          name:name,
+          _replyto:email,
+          email:email,
+          comments:comments,
+          _subject:'Customer Form Submission',
+        },
+        dataType:"json",
+        success:function() {
+          console.log('success'); 
+          $('#formBlock').hide();
+          $('#thankyouBlock').show();
+        }   
+      });     
+    });
+}); 
+</script>
 
 </body>
 </html>
