@@ -212,9 +212,9 @@
 -->
 <div id="formBlock">
   <form id="someForm">
-    <label for="name">Name:</label> <input type="text" id="bk_name"><br/>
-    <label for="email">Email:</label> <input type="email" id="bk_email"><br/>
-    <label for="comments">Comments:</label> <br/>
+    <p>Name:</p> <input type="text" id="bk_name"><br/>
+    <p>Email:</p> <input type="email" id="bk_email"><br/>
+    <p>Comments:</p> <br/>
     <textarea id="bk_comments"></textarea><br/>
     <input type="submit" id="bk_submit" value="寄出">
   </form>
@@ -253,13 +253,13 @@
       //send to formspree
       $.ajax({
         url:'https://formspree.io/chenjuichi@gmail.com',
-        method:'POST',
+        method:"POST",
         data:{
           name:name,
-          _replyto:email,
-          email:email,
+          _replyto:email,                   
+          _subject:'新郵件! Customer Form Submission',
+          email:email, 
           comments:comments,
-          _subject:'Customer Form Submission',
         },
         dataType:"json",
         success:function() {
