@@ -36,7 +36,7 @@ p {
 .table-body table tr:nth-child(2n+1) {
   background-color:#afdff0;
 }    
-button, input, select, textarea {
+button, input, select, #formformBlock {
   margin-left: 10px;
 }
 #thankyouBlock {
