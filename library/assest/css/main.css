@@ -39,9 +39,9 @@ p {
 button, input, select, textarea, label {
   margin-left: 10px;
 }
-#thankyouBlock, #loading {
+#thankyouBlock {
   color: red;
-  font-size: 20px;
+  font-size: 25px;
 }
 .wr100 {
   float: right;

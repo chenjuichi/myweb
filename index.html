@@ -224,7 +224,7 @@
         },
         dataType:"json",
         beforeSend: function() {
-          $('#someForm').append('<div class="loading">Sending message…</div>');
+          $('#someForm').append('<div class="loading" style="color: red;font-size: 15px;">Sending message…</div>');
         },
         success:function() {
           console.log('success'); 
