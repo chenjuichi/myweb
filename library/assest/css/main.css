@@ -36,30 +36,24 @@ p {
 .table-body table tr:nth-child(2n+1) {
   background-color:#afdff0;
 }    
-button, input, select, #formformBlock {
+button, input, select, textarea, label {
   margin-left: 10px;
 }
 #thankyouBlock {
   color: red;
   font-size: 25px;
 }
-.w200 {
-  width: 200px;
-  float: right; 
-}
-.all1 {
-  width: calc(100% - 200px - 1em); //1em是間距的距離  
-}
 .wr100 {
   float: right;
-  width: 100px;
+  width: 200px;
 }
 .wl100 {
   float: left;
-  width: 100px;
+  width: 200px;
+  margin-left: 10px;
 }
 .all2 {
-  width: calc(100% - 200px - 2em);
+  width: calc(100% - 400px - 2em);  //2em是間距的距離
   margin: 0 1em; //間距的距離
 }
   
