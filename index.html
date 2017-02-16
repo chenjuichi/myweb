@@ -179,6 +179,7 @@
     <input type="submit" id="bk_submit" value="送出">
   </form>
 </div>
+<div id="success"></div>
 <div id="thankyouBlock" style="display:none">
   <p>謝謝你! 會盡快與你聯絡.</p>
 </div>
@@ -218,15 +219,21 @@
           name:name,
           _replyto:email,                   
           _subject:'新郵件! Customer Form Submission',
-          _next: 'mis.pmc.org.tw',
           email:email, 
           comments:comments,
         },
         dataType:"json",
+        beforeSend: function() {
+          $('#someForm').append('<div class="loading">Sending message…</div>');
+        },
         success:function() {
           console.log('success'); 
           $('#formBlock').hide();          
-          $('#thankyouBlock').show();         
+          $('#thankyouBlock').show();
+          $('#success').html("<div class='alert alert-success'>");
+          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+          $('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
+          $('#success > .alert-success').append('</div>');         
         }   
       });     
     });
