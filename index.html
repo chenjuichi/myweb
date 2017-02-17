@@ -179,7 +179,7 @@
     <!--    
     <input type="submit" id="bk_submit" value="送出">
     -->
-    <input type="button" id="bk_submit" value="送出">
+    <input type="submit" id="bk_submit" value="送出">
     <input type="reset" id="bk_reset" value="清除">
   </form>
 </div>
@@ -195,7 +195,8 @@
   //jQuery
   //$(document).ready(function() {
   $(function() {
-    $('#someForm').on('click', '#bk_submit', function(e) {
+    $(document).on('submit', '#someForm', function(e) {
+    //$('#someForm').on('click', '#bk_submit', function(e) {
       e.preventDefault(); // 阻擋Enter的submit動作!
         
       //get the name field value
@@ -242,7 +243,7 @@
           document.getElementById("someForm").reset();                
         }   
       }); //end $.ajax function 
-      //return false;    
+      return false;    
     });   //end submit button function
 }); 
 </script>
