@@ -229,11 +229,12 @@
         },
         success:function() {
           console.log('success'); 
-          //$('#formBlock').hide();          
+          //$('#formBlock').hide();
+          $('.loading').hide();            
           $('#thankyouBlock').show();
           $('p.thankyou').delay(3000 ).slideUp( 500 );
-          
-          $('#someForm')[0].reset();               
+          document.getElementById("someForm").reset();
+                         
         }   
       }); //end $.ajax function     
     });   //end submit button function
