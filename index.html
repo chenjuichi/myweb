@@ -181,9 +181,13 @@
   </form>
 </div>
 <div id="success" style="color: red;font-size: 25px;"></div>
+
+<!--
 <div id="thankyouBlock" style="display:none">
   <p class="thankyou">謝謝你! 會盡快與你聯絡.</p>
 </div>
+-->
+
 <!--
 <div class="container">
   <div class="row">
@@ -233,11 +237,12 @@
           //$('#formBlock').hide();
           //$('.loading').hide();
           //$('.loading').html("謝謝你! 會盡快與你聯絡.");
-          $('#success').html("謝謝你! 會盡快與你聯絡.");             
+          //$('#success').html("謝謝你! 會盡快與你聯絡.");
+          $('#success').html("謝謝你! 會盡快與你聯絡.").delay(3000 ).remove();             
           //$('#thankyouBlock').show();
           //$('p.thankyou').delay(3000 ).slideUp( 500 );
-          $('div.loading').delay(3000 ).slideUp( 500 );
-          $('#success').delay(3000 ).slideUp( 500 );
+          //$('div.loading').delay(3000 ).slideUp( 500 );
+          ///$('#success').delay(3000 ).slideUp( 500 );
           document.getElementById("someForm").reset();
                          
         }   
