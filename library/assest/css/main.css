@@ -56,4 +56,8 @@ button, input, select, textarea, label {
   width: calc(100% - 400px - 2em);  //2em是間距的距離
   margin: 0 1em; //間距的距離
 }
+input:reset {
+  background: yellow;
+  border: 2px red solid;
+}
   

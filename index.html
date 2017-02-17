@@ -177,6 +177,7 @@
     <textarea id="bk_comments"></textarea>
     <br>    
     <input type="submit" id="bk_submit" value="送出">
+    <input type="reset" id="bk_reset" value="清除">
   </form>
 </div>
 <div id="success"></div>
@@ -231,8 +232,8 @@
           $('#formBlock').hide();          
           $('#thankyouBlock').show();       
         }   
-      });     
-    });
+      }); //end $.ajax function     
+    });   //end submit button function
 }); 
 </script>
 
