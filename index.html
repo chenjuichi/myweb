@@ -229,8 +229,9 @@
         },
         success:function() {
           console.log('success'); 
-          $('#formBlock').hide();          
-          $('#thankyouBlock').show();       
+          //$('#formBlock').hide();          
+          $('#thankyouBlock').show().delay(3000 ).slideUp( 500 );
+          $('#formBlock').trigger('reset');               
         }   
       }); //end $.ajax function     
     });   //end submit button function
