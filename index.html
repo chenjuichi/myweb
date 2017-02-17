@@ -193,7 +193,7 @@
   //$(document).ready(function() {
   $(function() {
     $('#someForm').on('click', '#bk_submit', function(e) {
-      e.preventDefault();
+      e.preventDefault(); // 阻擋Enter的submit動作!
         
       //get the name field value
       var name = $('#bk_name').val();
@@ -205,6 +205,9 @@
       //pretend we don't need validation
         
       //send to formspree
+      
+      $('#someForm').unbind("submit");
+
       $.ajax({
         url:'https://formspree.io/chenjuichi@gmail.com',
         method:"POST",
