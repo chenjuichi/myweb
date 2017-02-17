@@ -232,7 +232,8 @@
           //$('#formBlock').hide();          
           $('#thankyouBlock').show();
           $('p.thankyou').delay(3000 ).slideUp( 500 );
-          $('#someForm').reset();               
+          
+          $('#someForm')[0].reset();               
         }   
       }); //end $.ajax function     
     });   //end submit button function
