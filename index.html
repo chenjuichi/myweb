@@ -233,7 +233,8 @@
 
           $(function() {
             function show_popup() {
-              $('#success').html("Sending message…");            
+              document.getElementById("#success").innerHTML = "Sending message…";
+              //$('#success').html("Sending message…");            
             };        
             window.setTimeout( show_popup, 3000 ); // 3 seconds
           });
@@ -249,7 +250,8 @@
 
           //$(function() {
           //  function show_popup() {
-              $('#success').html("謝謝你! 會盡快與你聯絡.");
+              document.getElementById("#success").innerHTML = "謝謝你! 會盡快與你聯絡.";
+              //$('#success').html("謝謝你! 會盡快與你聯絡.");
               $('#success').slideUp( 500 );
           //  };        
           //  window.setTimeout( show_popup, 3000 ); // 3 seconds
