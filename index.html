@@ -235,12 +235,14 @@
      
           //$(function() {
           //  function show_popup() {
-              $('#success').html("謝謝你! 會盡快與你聯絡.");       
+              ///last $('#success').html("謝謝你! 會盡快與你聯絡.");       
           //  };        
           //  window.setTimeout( show_popup, 3000 ); // 3 seconds
           //});
-          $('#success').delay( 5000 ).slideUp( 500 );
-          document.getElementById("someForm").reset();                
+          ///last $('#success').delay( 5000 ).slideUp( 500 );
+          document.getElementById("someForm").reset(); 
+          $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 3000 ).slideUp( 500 );  ;
+                      
         }   
       }); //end $.ajax function 
       return false;    
