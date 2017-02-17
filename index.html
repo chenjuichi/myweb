@@ -238,7 +238,18 @@
           //$('.loading').hide();
           //$('.loading').html("謝謝你! 會盡快與你聯絡.");
           //$('#success').html("謝謝你! 會盡快與你聯絡.");
-          $('#success').html("謝謝你! 會盡快與你聯絡.").delay(3000 ).remove();             
+
+          $(function() {
+            function show_popup() {
+              $('#success').html("謝謝你! 會盡快與你聯絡.");
+              $('#success').slideUp( 500 );
+            };        
+            window.setTimeout( show_popup, 3000 ); // 3 seconds
+          });
+
+          /// $('#success').html("謝謝你! 會盡快與你聯絡.");             
+          /// $('#success').delay(3000 );
+          /// $('#success').html("謝謝你! 會盡快與你聯絡.").delay(3000 ).remove();
           //$('#thankyouBlock').show();
           //$('p.thankyou').delay(3000 ).slideUp( 500 );
           //$('div.loading').delay(3000 ).slideUp( 500 );
