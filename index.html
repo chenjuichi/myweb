@@ -188,18 +188,6 @@
 </div>
 -->
 
-<!--
-<div class="container">
-  <div class="row">
-	 <div class="=col-md-6">
-    <h2 id="header1">HEADER 1</h1>   
-   </div>
-	 <div class="=col-md-6">
-    <h2 id="header2">HEADER 2</h1>    
-   </div>
-  </div>
-</div>
--->
 <script>
   //jQuery
   //$(document).ready(function() {
@@ -229,43 +217,23 @@
         },
         dataType:"json",
         beforeSend: function() {
-          //$('#success').html("Sending message…"); 
-
-          $(function() {
-            function show_popup() {
-              document.getElementById("#success").innerHTML = "Sending message…";
-              //$('#success').html("Sending message…");            
-            };        
-            window.setTimeout( show_popup, 3000 ); // 3 seconds
-          });
+          $('#success').html("Sending message…"); 
 
           //$('#success').append('<div class="loading" style="color: red;font-size: 25px;">Sending message…</div>');
         },
         success:function() {
           console.log('success'); 
           //$('#formBlock').hide();
-          //$('.loading').hide();
-          //$('.loading').html("謝謝你! 會盡快與你聯絡.");
-          //$('#success').html("謝謝你! 會盡快與你聯絡.");
-
-          //$(function() {
-          //  function show_popup() {
-              document.getElementById("#success").innerHTML = "謝謝你! 會盡快與你聯絡.";
-              //$('#success').html("謝謝你! 會盡快與你聯絡.");
-              $('#success').slideUp( 500 );
-          //  };        
-          //  window.setTimeout( show_popup, 3000 ); // 3 seconds
-          //});
-
-          /// $('#success').html("謝謝你! 會盡快與你聯絡.");             
-          /// $('#success').delay(3000 );
-          /// $('#success').html("謝謝你! 會盡快與你聯絡.").delay(3000 ).remove();
           //$('#thankyouBlock').show();
-          //$('p.thankyou').delay(3000 ).slideUp( 500 );
-          //$('div.loading').delay(3000 ).slideUp( 500 );
-          ///$('#success').delay(3000 ).slideUp( 500 );
-          document.getElementById("someForm").reset();
-                         
+     
+          $(function() {
+            function show_popup() {
+              $('#success').html("謝謝你! 會盡快與你聯絡.");       
+            };        
+            window.setTimeout( show_popup, 3000 ); // 3 seconds
+          });
+          $('#success').slideUp( 500 );
+          document.getElementById("someForm").reset();                
         }   
       }); //end $.ajax function     
     });   //end submit button function
