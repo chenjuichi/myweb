@@ -182,7 +182,7 @@
 </div>
 <div id="success"></div>
 <div id="thankyouBlock" style="display:none">
-  <p>謝謝你! 會盡快與你聯絡.</p>
+  <p class="thankyou">謝謝你! 會盡快與你聯絡.</p>
 </div>
 <!--
 <div class="container">
@@ -230,7 +230,8 @@
         success:function() {
           console.log('success'); 
           //$('#formBlock').hide();          
-          $('#thankyouBlock').show().delay(3000 ).slideUp( 500 );
+          $('#thankyouBlock').show();
+          $('p.thankyou').delay(3000 ).slideUp( 500 );
           $('#formBlock').trigger('reset');               
         }   
       }); //end $.ajax function     
