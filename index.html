@@ -175,8 +175,11 @@
     <label for="comments">說明:</label>
     <br>
     <textarea id="bk_comments"></textarea>
-    <br>    
+    <br>
+    <!--    
     <input type="submit" id="bk_submit" value="送出">
+    -->
+    <input type="button" id="bk_submit" value="送出">
     <input type="reset" id="bk_reset" value="清除">
   </form>
 </div>
@@ -206,7 +209,7 @@
         
       //send to formspree
       
-      $('#someForm').unbind("submit");
+      //$('#someForm').unbind("submit");
 
       $.ajax({
         url:'https://formspree.io/chenjuichi@gmail.com',
@@ -238,7 +241,8 @@
           $('#success').delay( 5000 ).slideUp( 500 );
           document.getElementById("someForm").reset();                
         }   
-      }); //end $.ajax function     
+      }); //end $.ajax function 
+      //return false;    
     });   //end submit button function
 }); 
 </script>
