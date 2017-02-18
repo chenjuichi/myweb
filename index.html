@@ -183,21 +183,21 @@
     <input type="reset" id="bk_reset" value="清除">
   </form>
 </div>
-
-<div id="success" style="color: red;font-size: 25px;"></div>
-
 <!--
+<div id="success" style="color: red;font-size: 25px;"></div>
+-->
+
 <div id="thankyouBlock" style="display:none">
   <p class="thankyou">謝謝你! 會盡快與你聯絡.</p>
 </div>
--->
+
 
 <script>
   //jQuery
   //$(document).ready(function() {
   $(function() {
-    $(document).on('submit', '#someForm', function(e) {
-    //$('#someForm').on('click', '#bk_submit', function(e) {
+    //$(document).on('submit', '#someForm', function(e) {
+    $('#someForm').on('submit', function(e) {
       e.preventDefault(); // 阻擋Enter的submit動作!
         
       //get the name field value
@@ -224,11 +224,12 @@
           email:email, 
           comments:comments,
         },
-        dataType: "application/json",
-        //dataType: "json",
+        //dataType: "application/json",
+        dataType: "json",
         beforeSend: function() {
           ///$('#someForm').html("<div id='message'></div>");
-          $('#success').html("Sending message…"); 
+          $('.thankyou').html("Sending message…");
+          $('#thankyouBlock').show(); 
 
           //$('#success').append('<div class="loading" style="color: red;font-size: 25px;">Sending message…</div>');
         },  //end beforeSend
@@ -245,8 +246,10 @@
           //  window.setTimeout( show_popup, 3000 ); // 3 seconds
           //});
           ///last $('#success').delay( 5000 ).slideUp( 500 );
-          document.getElementById("someForm").reset(); 
-          $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 );              
+          document.getElementById("someForm").reset();
+          $('#thankyouBlock').hide();
+          $('.thankyou').html("謝謝你! 會盡快與你聯絡."); 
+          $('#thankyouBlock').show().delay( 2000 ).slideUp( 500 );              
         } //end sucess   
       }); //end $.ajax function 
       return false;    
