@@ -214,7 +214,6 @@
       //$('#someForm').unbind("submit");
 
       $.ajax({
-        //async: false,
         url:'https://formspree.io/chenjuichi@gmail.com',
         method:"POST",
         data:{
@@ -224,28 +223,16 @@
           email:email, 
           comments:comments,
         },
-        //dataType: "application/json",
         dataType: "json",
         beforeSend: function() {
-          ///$('#someForm').html("<div id='message'></div>");
           $('.thankyou').html("Sending message…");
           $('#thankyouBlock').show(); 
-
-          //$('#success').append('<div class="loading" style="color: red;font-size: 25px;">Sending message…</div>');
         },  //end beforeSend
-        //complete: function() {
         success: function() {
           console.log('success'); 
           //$('#formBlock').hide();
           //$('#thankyouBlock').show();
      
-          //$(function() {
-          //  function show_popup() {
-              ///last $('#success').html("謝謝你! 會盡快與你聯絡.");       
-          //  };        
-          //  window.setTimeout( show_popup, 3000 ); // 3 seconds
-          //});
-          ///last $('#success').delay( 5000 ).slideUp( 500 );
           document.getElementById("someForm").reset();
           $('#thankyouBlock').hide();
           $('.thankyou').html("謝謝你! 會盡快與你聯絡."); 
@@ -254,9 +241,10 @@
       }); //end $.ajax function 
       return false;    
     });   //end submit button function
-    //$(document).ajaxSuccess(function( ) {
+    $(document).ajaxSuccess(function( ) {
+      console.log('global success...'); 
     //  $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 //);
-    //});
+    });
   }); 
 </script>
 
