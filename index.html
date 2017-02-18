@@ -245,12 +245,15 @@
           //});
           ///last $('#success').delay( 5000 ).slideUp( 500 );
           document.getElementById("someForm").reset(); 
-          $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 );              
+          //$('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 );              
         } //end sucess   
       }); //end $.ajax function 
       return false;    
     });   //end submit button function
-}); 
+    $(document .ajaxSuccess(function( ) {
+      $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 );
+    });
+  }); 
 </script>
 
 </body>
