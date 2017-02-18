@@ -224,15 +224,16 @@
           email:email, 
           comments:comments,
         },
-        dataType:"json",
+        dataType: "application/json",
+        //dataType: "json",
         beforeSend: function() {
           ///$('#someForm').html("<div id='message'></div>");
           $('#success').html("Sending message…"); 
 
           //$('#success').append('<div class="loading" style="color: red;font-size: 25px;">Sending message…</div>');
         },  //end beforeSend
-        complete: function() {
-        //success: function() {
+        //complete: function() {
+        success: function() {
           console.log('success'); 
           //$('#formBlock').hide();
           //$('#thankyouBlock').show();
@@ -245,7 +246,7 @@
           //});
           ///last $('#success').delay( 5000 ).slideUp( 500 );
           document.getElementById("someForm").reset(); 
-          //$('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 );              
+          $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 );              
         } //end sucess   
       }); //end $.ajax function 
       return false;    
