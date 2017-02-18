@@ -183,6 +183,7 @@
     <input type="reset" id="bk_reset" value="清除">
   </form>
 </div>
+
 <div id="success" style="color: red;font-size: 25px;"></div>
 
 <!--
@@ -224,11 +225,12 @@
         },
         dataType:"json",
         beforeSend: function() {
+          ///$('#someForm').html("<div id='message'></div>");
           $('#success').html("Sending message…"); 
 
           //$('#success').append('<div class="loading" style="color: red;font-size: 25px;">Sending message…</div>');
-        },
-        success:function() {
+        },  //end beforeSend
+        success: function() {
           console.log('success'); 
           //$('#formBlock').hide();
           //$('#thankyouBlock').show();
@@ -240,10 +242,9 @@
           //  window.setTimeout( show_popup, 3000 ); // 3 seconds
           //});
           ///last $('#success').delay( 5000 ).slideUp( 500 );
-          document.getElementById("someForm").reset(); 
-          $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 3000 ).slideUp( 500 );  ;
-                      
-        }   
+          ////document.getElementById("someForm").reset(); 
+          $('#formBlock').html("謝謝你! 會盡快與你聯絡.").delay( 2500 ).slideUp( 500 );              
+        } //end sucess   
       }); //end $.ajax function 
       return false;    
     });   //end submit button function
