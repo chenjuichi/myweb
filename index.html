@@ -249,14 +249,14 @@
           document.getElementById("someForm").reset();
           $('#thankyouBlock').hide();
           $('.thankyou').html("謝謝你! 會盡快與你聯絡."); 
-          $('#thankyouBlock').show().delay( 2000 ).slideUp( 500 );              
+          $('#thankyouBlock').show().delay(2000).slideUp(1000);              
         } //end sucess   
       }); //end $.ajax function 
       return false;    
     });   //end submit button function
-    $(document).ajaxSuccess(function( ) {
-      $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 );
-    });
+    //$(document).ajaxSuccess(function( ) {
+    //  $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 //);
+    //});
   }); 
 </script>
 
