@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8"> <!--HTML5 網頁編碼宣告 -->	
-	<meta http-equiv="x-ua-compatible" content="IE=edge" >	<!--IE瀏覽器相容版本-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">	<!--行動裝置支援, 不讓使用者縮放-->
+  <meta charset="UTF-8"> <!--HTML5 網頁編碼宣告 --> 
+  <meta http-equiv="x-ua-compatible" content="IE=edge" >  <!--IE瀏覽器相容版本-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">  <!--行動裝置支援, 不讓使用者縮放-->
 
-	<title>Document</title>
+  <title>Document</title>
   
-	<link rel="stylesheet" type="text/css" href="library/bootstrap-3.3.7-dist/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="library/bootstrap-3.3.7-dist/css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="library/assest/css/main.css" />
 
   <script src="library/jQuery-3.1.1/jquery-3.1.1.js"></script>
-  <script>
+  <script src="" ="library/bootstrap-3.3.7-dist/js/bootstrap.js"/>
+  
     //pure javascript
     //function ready() {
     //  var element = document.getElementById("header1");
@@ -21,44 +22,67 @@
     //jQuery
     //$( document ).ready(function() {
     $(function() {
-          $("#header2").html('HEADER 2已改為表頭2 jquery').css('color', 'green');
-          $( document ).on('click', '#button', function(event) {
-            var to_change_text = $('#textbox').val();
-            $(".apple").html(to_change_text).css('color', 'red');
-            $("#textbox").val('');
-          });
+      $("#header2").html('HEADER 2已改為表頭2 jquery').css('color', 'green');
+      $(document ).on('click', '#button', function(event) {
+        var to_change_text = $('#textbox').val();
+        $(".apple").html(to_change_text).css('color', 'red');
+        $("#textbox").val('');
+      });
     });
   </script>
 </head>
 
 <!--this tag for pure javascript: <body onload="ready()"> -->
 <body>
+  <div class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">YOUR LOGO</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><a href="pricing.html">PRICING</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>           
+    </div>
+  </div>  <!--/.NAVBAR END-->
+
+
 <!--define table-->
-<div style="width: 300px;">	
-	<div class="table-head">	<!--define table head-->
-  	<table>
-    	<colgroup>
-      	<col style="width: 80px;"></col>
-    	</colgroup>
-    	<thead>
-      	<tr>
-        	<th>序號</th>
-        	<th>內容</th>
-      	</tr>
-    	</thead>
-  	</table>
+<div style="width: 300px;"> 
+  <div class="table-head">  <!--define table head-->
+    <table>
+      <colgroup>
+        <col style="width: 80px;"></col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>序號</th>
+          <th>內容</th>
+        </tr>
+      </thead>
+    </table>
   </div>    <!--end table head-->
   
-  <div class="table-body">	<!--define table body-->
-  	<table class="table table-hover table-striped table-bordered">
-  		<colgroup>
-    		<col style="width: 80px;"></col>
-  		</colgroup>
-  		<tbody>
-    		<tr>
-      		<td>1</td>
-      		<td>我只是用來測試的</td>
-    		</tr>
+  <div class="table-body">  <!--define table body-->
+    <table class="table table-hover table-striped table-bordered">
+      <colgroup>
+        <col style="width: 80px;"></col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>我只是用來測試的</td>
+        </tr>
         <tr>
           <td>2</td>
           <td>我只是用來測試的</td>
@@ -127,7 +151,7 @@
     </table>
   </div>    <!--end table body-->
   
-  <div class="table-foot">	<!--define table foot-->
+  <div class="table-foot">  <!--define table foot-->
     <table>
       <colgroup>
         <col style="width: 80px;"></col>
@@ -160,10 +184,10 @@
 
 <br>
 <form>
-	<input type="text" id="textbox" placeholder="帳號">
-	<input type="password" placeholder="密碼">
-	<input type="submit" id="bt_submit" value="login">
-	<input type="button" id="button" value="button">
+  <input type="text" id="textbox" placeholder="帳號">
+  <input type="password" placeholder="密碼">
+  <input type="submit" id="bt_submit" value="login">
+  <input type="button" id="button" value="button">
 </form>
 
 <div id="formBlock">
@@ -183,21 +207,20 @@
     <input type="reset" id="bk_reset" value="清除">
   </form>
 </div>
-
-<div id="success" style="color: red;font-size: 25px;"></div>
-
 <!--
+<div id="success" style="color: red;font-size: 25px;"></div>
+-->
+
 <div id="thankyouBlock" style="display:none">
   <p class="thankyou">謝謝你! 會盡快與你聯絡.</p>
 </div>
--->
 
 <script>
   //jQuery
   //$(document).ready(function() {
   $(function() {
-    $(document).on('submit', '#someForm', function(e) {
-    //$('#someForm').on('click', '#bk_submit', function(e) {
+    //$(document).on('submit', '#someForm', function(e) {
+    $('#someForm').on('submit', function(e) {
       e.preventDefault(); // 阻擋Enter的submit動作!
         
       //get the name field value
@@ -212,9 +235,7 @@
       //send to formspree
       
       //$('#someForm').unbind("submit");
-
       $.ajax({
-        //async: false,
         url:'https://formspree.io/chenjuichi@gmail.com',
         method:"POST",
         data:{
@@ -224,34 +245,28 @@
           email:email, 
           comments:comments,
         },
-        dataType:"json",
+        dataType: "json",
         beforeSend: function() {
-          ///$('#someForm').html("<div id='message'></div>");
-          $('#success').html("Sending message…"); 
-
-          //$('#success').append('<div class="loading" style="color: red;font-size: 25px;">Sending message…</div>');
+          $('.thankyou').html("Sending message…");
+          $('#thankyouBlock').show(); 
         },  //end beforeSend
-        complete: function() {
-        //success: function() {
+        success: function() {
           console.log('success'); 
           //$('#formBlock').hide();
           //$('#thankyouBlock').show();
      
-          //$(function() {
-          //  function show_popup() {
-              ///last $('#success').html("謝謝你! 會盡快與你聯絡.");       
-          //  };        
-          //  window.setTimeout( show_popup, 3000 ); // 3 seconds
-          //});
-          ///last $('#success').delay( 5000 ).slideUp( 500 );
-          document.getElementById("someForm").reset(); 
-          $('#success').html("謝謝你! 會盡快與你聯絡.").delay( 2000 ).slideUp( 500 );              
+          document.getElementById("someForm").reset();
+          $('#thankyouBlock').hide();
+          //$('.thankyou').html("謝謝你! 會盡快與你聯絡."); 
+          $('#thankyouBlock').show().delay(2000).slideUp(1000);              
         } //end sucess   
       }); //end $.ajax function 
       return false;    
     });   //end submit button function
-}); 
+    $(document).ajaxSuccess(function( ) {
+      console.log('global success...');     
+    });
+  }); 
 </script>
-
 </body>
 </html>
