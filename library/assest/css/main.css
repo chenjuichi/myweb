@@ -119,6 +119,7 @@ button, input, select, textarea, label {
     position: absolute;
     overflow-y: scroll;
     height: 250px;
+    border-bottom: 1px solid;
 }
 
 .table-scroll tr {
@@ -131,6 +132,3 @@ button, input, select, textarea, label {
     border: none;
 }
 
-.table-scroll {
-    border: 1px solid;
-  }
