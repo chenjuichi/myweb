@@ -43,6 +43,8 @@ button, input, select, textarea, label {
   color: red;
   font-size: 25px;
 }
+
+/*
 .wr100 {
   float: right;
   width: 200px;
@@ -56,6 +58,7 @@ button, input, select, textarea, label {
   width: calc(100% - 400px - 2em);  //2em是間距的距離
   margin: 0 1em; //間距的距離
 }
+*/
 
 /*
 .fixed_headers {
@@ -119,7 +122,8 @@ button, input, select, textarea, label {
     position: absolute;
     overflow-y: scroll;
     height: 250px;
-    border-bottom: 1px solid;
+
+    /*border-bottom: 1px solid; */
 }
 
 .table-scroll tr {

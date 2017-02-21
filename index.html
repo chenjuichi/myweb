@@ -24,12 +24,16 @@
     //jQuery
     //$( document ).ready(function() {
     $(function() {
-      $("#header2").html('HEADER 2已改為表頭2 jquery').css('color', 'green');
-      $(document ).on('click', '#button', function(event) {
-        var to_change_text = $('#textbox').val();
-        $(".apple").html(to_change_text).css('color', 'red');
-        $("#textbox").val('');
-      });
+    // 106/02/21 temp mark
+    //
+    //  $("#header2").html('HEADER 2已改為表頭2 jquery').css('color', 'green');
+    //  $(document ).on('click', '#button', function(event) {
+    //    var to_change_text = $('#textbox').val();
+    //    $(".apple").html(to_change_text).css('color', 'red');
+    //    $("#textbox").val('');
+    //  });
+    //
+    // 106/02/21 end temp mark
     });
   </script>
 </head>
@@ -331,8 +335,9 @@
 </table>
 
 <!--define table-->
+<!-- 106/02/21 temp mark
 <div style="width: 300px;"> 
-  <div class="table-head">  <!--define table head-->
+  <div class="table-head">  
     <table>
       <colgroup>
         <col style="width: 80px;"></col>
@@ -344,9 +349,9 @@
         </tr>
       </thead>
     </table>
-  </div>    <!--end table head-->
+  </div>    
   
-  <div class="table-body">  <!--define table body-->
+  <div class="table-body">  
     <table class="table table-hover table-striped table-bordered">
       <colgroup>
         <col style="width: 80px;"></col>
@@ -422,9 +427,9 @@
         </tr>
       </tbody>
     </table>
-  </div>    <!--end table body-->
+  </div>    
   
-  <div class="table-foot">  <!--define table foot-->
+  <div class="table-foot">  
     <table>
       <colgroup>
         <col style="width: 80px;"></col>
@@ -437,8 +442,10 @@
       </tfoot>
     </table>
   </div>  
-</div>    <!--end table foot-->
+</div>
+ 106/02/21 end temp mark -->   
 
+<!-- 106/02/21 end temp mark
 <div class="test1">
   <p>這是
   <span class="apple">apple</span> 
@@ -456,6 +463,8 @@
 </div>
 
 <br>
+106/02/21 end temp mark -->
+
 <form>
   <input type="text" id="textbox" placeholder="帳號">
   <input type="password" placeholder="密碼">
