@@ -58,7 +58,7 @@ button, input, select, textarea, label {
 }
 
 .fixed_headers {
-  width: 700px;
+  width: 750px;
   table-layout: fixed;
   border-collapse: collapse;
 }
