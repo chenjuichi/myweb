@@ -136,8 +136,11 @@ button, input, select, textarea, label {
     border: none;
 }
 
+.table-scroll {
+    width: 70%;
+}
+
 #formId {
-  margin-top: 260px;
-  width: 70%
+  margin-top: 260px; 
 }
 
