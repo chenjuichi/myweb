@@ -40,7 +40,7 @@ p {
 */
 
 button, input, select, textarea, label {
-  margin-left: 10px;
+  margin-left: 120px;
 }
 #thankyouBlock {
   color: red;
@@ -132,11 +132,10 @@ button, input, select, textarea, label {
     table-layout: fixed;
     display: inline-table;
 }
-/*
+
 .table-scroll thead > tr > th {
     border: none;
 }
-*/
 
 #formId {
   margin-top: 260px; 
