@@ -473,7 +473,7 @@
 </div>
 
 <div id="formBlock">
-  <form id="someForm">
+  <form id="someForm" onsubmit="return false">
     <label for="name">姓名: </label> <input type="text" id="bk_name"></label>
     <br>
     <label for="email">Email:</label> <input type="email" id="bk_email"></label>
@@ -504,7 +504,7 @@
   //$(document).ready(function() {
   $(function() {
     //$(document).on('submit', '#someForm', function(e) {
-    $('#someForm').on('submit', function(e) {br
+    $('#someForm').on('submit', function(e) {
       e.preventDefault(); // 阻擋Enter的submit動作!
         
       //get the name field value
@@ -544,7 +544,7 @@
           $('.thankyou').html("謝謝你! 會盡快與你聯絡."); 
           $('#thankyouBlock').show().delay(2000).slideUp(1000);
           //$('#thankyouBlock').slideDown(4000).delay(1000).slideUp(1000); 
-          window.scrollTo(0, 300);              
+                        
         } //end sucess   
       }); //end $.ajax function 
       return false;    
