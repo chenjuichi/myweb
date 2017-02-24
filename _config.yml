@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -32,3 +33,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+=======
+
+>>>>>>> 338a7b4e3c7e6b36a4d082140f24a658086350ef
